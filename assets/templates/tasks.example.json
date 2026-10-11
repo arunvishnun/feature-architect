@@ -1,0 +1,40 @@
+[
+  {
+    "id": "T01",
+    "phase": "P01",
+    "title": "Define typed feature state and service contracts",
+    "depends_on": [],
+    "acceptance": [
+      "The new types match the approved architecture and include documented error states.",
+      "The unit tests verify normal requests and rejected requests."
+    ],
+    "files": ["src/feature/contracts.ts"],
+    "verify": ["npm test -- feature-contracts"],
+    "risk": "low"
+  },
+  {
+    "id": "T02",
+    "phase": "P01",
+    "title": "Record feature telemetry with the existing logger",
+    "depends_on": [],
+    "acceptance": [
+      "The telemetry records success and failure without changing the contract types."
+    ],
+    "files": ["src/feature/telemetry.ts"],
+    "verify": ["npm test -- feature-telemetry"],
+    "risk": "low"
+  },
+  {
+    "id": "T03",
+    "phase": "P02",
+    "title": "Build the interface using existing components and design tokens",
+    "depends_on": ["T01", "T02"],
+    "acceptance": [
+      "The feature displays the approved default, empty, loading and error states.",
+      "Keyboard navigation and the supported light and dark themes work as designed."
+    ],
+    "files": ["src/feature/FeatureView.tsx"],
+    "verify": ["npm test -- feature-ui"],
+    "risk": "medium"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "phases": [
+    {
+      "id": "P01",
+      "title": "Define feature contracts and state",
+      "file": ".plans/example-feature/phases/P01-foundation.md",
+      "tasks": ["T01", "T02"],
+      "depends_on": []
+    },
+    {
+      "id": "P02",
+      "title": "Implement the feature interface",
+      "file": ".plans/example-feature/phases/P02-interface.md",
+      "tasks": ["T03"],
+      "depends_on": ["P01"]
+    }
+  ]
+}
