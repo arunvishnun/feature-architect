@@ -18,6 +18,8 @@ feature-architect/
     implementation-planning.md
     phased-execution.md
     technical-writing.md
+    ux-ui-expertise.md
+    claude-agent-sdk.md
   assets/templates/
     architecture.md
     implementation-plan.md
